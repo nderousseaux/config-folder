@@ -10,7 +10,7 @@ rshift - r : open -a 'Reminders'
 rshift - q : open -a 'Calendar'
 rshift - s : open -a 'Messenger'
 rshift - d : open -a 'Messages'
-rshift - f : yabai -m window --focus 
+rshift - f : open -a 'Finder'
 rshift - w : open -a 'Notes'
 rshift - x : open -a 'Mail'
 rshift - c : open -a 'Music'
