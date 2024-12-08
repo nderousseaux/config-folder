@@ -35,7 +35,8 @@ Selectors are:
 - `i` : Mirror windows (`ralt` for horizontal, `ralt + rshift` for vertical)
 - `o` : Zoom (`ralt` for toggle zoom-parent, `ralt + rshift` for toggle
   zoom-fullscreen)
-- `p` : Toggle float (`ralt` for little float, `ralt + rshift` for big float)
+- `p` : Toggle float (`ralt` for little float, `rshift`for middle float,
+ `ralt + rshift` for big float)
 - `b` : Toggle pip (`ralt` for toggle pip)
 
 
