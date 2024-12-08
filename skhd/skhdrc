@@ -1,115 +1,122 @@
-#2 App shortcut 
-alt - c : open -a 'Visual Studio Code'
-alt - t : open -a 'Hyper'
-alt - b : open -a 'Safari'
-alt - r : open -a 'Reminders'
-alt - x : open -a 'Calendar'
-alt - l : open -a 'Messenger'
-alt - m : open -a 'Messages'
-alt - f : open -a 'Finder'
-alt - n : open -a 'Notes'
-alt - o : open -a 'Mail'
-alt - p : open -a 'Passwords'
-
+# ################################################################ #
+# Application Launchers
 # ################################################################ #
 
-# focus window
-alt - h : yabai -m window --focus west
-alt - j : yabai -m window --focus south
-alt - k : yabai -m window --focus north
-alt - l : yabai -m window --focus east
+# rshift -> focus
+rshift - a : open -a 'Visual Studio Code'
+rshift - z : open -a 'Hyper'
+rshift - e : open -a 'Safari'
+rshift - r : open -a 'Reminders'
+rshift - q : open -a 'Calendar'
+rshift - s : open -a 'Messenger'
+rshift - d : open -a 'Messages'
+rshift - f : yabai -m window --focus 
+rshift - w : open -a 'Notes'
+rshift - x : open -a 'Mail'
+rshift - c : open -a 'Music'
 
-# swap managed window
-# shift + alt - h : yabai -m window --swap north
 
-# move managed window
-# shift + cmd - h : yabai -m window --warp east
+# ################################################################ #
+# Spaces Organization
+# ################################################################ #
 
-# balance size of windows
-# shift + alt - 0 : yabai -m space --balance
+# rshift -> focus
+rshift - 0x12 : yabai -m space --focus 1
+rshift - 0x13 : yabai -m space --focus 2
+rshift - 0x14 : yabai -m space --focus 3
+rshift - 0x15 : yabai -m space --focus 4
+rshift - 0x17 : yabai -m space --focus 5
+rshift - 0x16 : yabai -m space --focus 6
+rshift - 0x1A : yabai -m space --focus 7
+rshift - 0x1C : yabai -m space --focus 8
+rshift - 0x19 : yabai -m space --focus 9
+rshift - 0x1D : yabai -m space --focus recent
 
-# make floating window fill screen
-# shift + alt - up     : yabai -m window --grid 1:1:0:0:1:1
+# ralt -> move
+ralt - 0x12 : yabai -m window --space 1
+ralt - 0x13 : yabai -m window --space 2
+ralt - 0x14 : yabai -m window --space 3
+ralt - 0x15 : yabai -m window --space 4
+ralt - 0x17 : yabai -m window --space 5
+ralt - 0x16 : yabai -m window --space 6
+ralt - 0x1A : yabai -m window --space 7
+ralt - 0x1C : yabai -m window --space 8
+ralt - 0x19 : yabai -m window --space 9
+ralt - 0x1D : yabai -m window --space recent
 
-# make floating window fill left-half of screen
-# shift + alt - left   : yabai -m window --grid 1:2:0:0:1:1
+# ralt + rshift -> move and follow focus
+rshift + ralt - 0x12 : yabai -m window --space 1; yabai -m space --focus 1
+rshift + ralt - 0x13 : yabai -m window --space 2; yabai -m space --focus 2
+rshift + ralt - 0x14 : yabai -m window --space 3; yabai -m space --focus 3
+rshift + ralt - 0x15 : yabai -m window --space 4; yabai -m space --focus 4
+rshift + ralt - 0x17 : yabai -m window --space 5; yabai -m space --focus 5
+rshift + ralt - 0x16 : yabai -m window --space 6; yabai -m space --focus 6
+rshift + ralt - 0x1A : yabai -m window --space 7; yabai -m space --focus 7
+rshift + ralt - 0x1C : yabai -m window --space 8; yabai -m space --focus 8
+rshift + ralt - 0x19 : yabai -m window --space 9; yabai -m space --focus 9
+rshift + ralt - 0x1D : yabai -m window --space recent; yabai -m space --focus recent
 
-# create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
-shift + alt - n : yabai -m space --create && \
-                   index="$(yabai -m query --spaces --display | jq 'map(select(."is-native-fullscreen" == false))[-1].index')" && \
-                   yabai -m window --space "${index}" && \
-                   yabai -m space --focus "${index}"
+# ################################################################ #
+# Window Management
+# ################################################################ #
 
-# fast focus desktop
-# cmd + alt - x : yabai -m space --focus recent
-alt - 1 : yabai -m space --focus 1
-alt - 2 : yabai -m space --focus 2
-alt - 3 : yabai -m space --focus 3
-alt - 4 : yabai -m space --focus 4
-alt - 5 : yabai -m space --focus 5
-alt - 6 : yabai -m space --focus 6
-alt - 7 : yabai -m space --focus 7
-alt - 8 : yabai -m space --focus 8
-alt - 9 : yabai -m space --focus 9
-alt - 0 : yabai -m space --focus 10
+# Start/Stop Yabai
+ralt - y : if ! pgrep -q yabai; then yabai --start-service; else yabai --stop-service; fi
 
-# send window to desktop and follow focus
-shift + alt - 1 : yabai -m window --space  1; yabai -m space --focus 1
-shift + alt - 2 : yabai -m window --space  2; yabai -m space --focus 2
-shift + alt - 3 : yabai -m window --space  3; yabai -m space --focus 3
-shift + alt - 4 : yabai -m window --space  4; yabai -m space --focus 4
-shift + alt - 5 : yabai -m window --space  5; yabai -m space --focus 5
-shift + alt - 6 : yabai -m window --space  6; yabai -m space --focus 6
-shift + alt - 7 : yabai -m window --space  7; yabai -m space --focus 7
-shift + alt - 8 : yabai -m window --space  8; yabai -m space --focus 8
-shift + alt - 9 : yabai -m window --space  9; yabai -m space --focus 9
-shift + alt - 0 : yabai -m window --space  10; yabai -m space --focus 10
 
-# focus monitor
-# ctrl + alt - z  : yabai -m display --focus prev
-# ctrl + alt - 3  : yabai -m display --focus 3
+# rshift -> focus
+rshift - h : yabai -m window --focus west
+rshift - j : yabai -m window --focus south
+rshift - k : yabai -m window --focus north
+rshift - l : yabai -m window --focus east
+rshift - m : yabai -m window --focus recent
 
-# send window to monitor and follow focus
-# ctrl + cmd - c  : yabai -m window --display next; yabai -m display --focus next
-# ctrl + cmd - 1  : yabai -m window --display 1; yabai -m display --focus 1
+# ralt -> move
+ralt - h : yabai -m window --warp west
+ralt - j : yabai -m window --warp south
+ralt - k : yabai -m window --warp north
+ralt - l : yabai -m window --warp east
+ralt - m : yabai -m window --warp recent
 
-# move floating window
-# shift + ctrl - a : yabai -m window --move rel:-20:0
-# shift + ctrl - s : yabai -m window --move rel:0:20
+# rcmd -> swap
+rcmd - h : yabai -m window --swap west
+rcmd - j : yabai -m window --swap south
+rcmd - k : yabai -m window --swap north
+rcmd - l : yabai -m window --swap east
+rcmd - m : yabai -m window --swap recent
 
-# increase window size
-# shift + alt - a : yabai -m window --resize left:-20:0
-# shift + alt - w : yabai -m window --resize top:0:-20
+# rcmd + ralt -> resize
+rshift + ralt - h : yabai -m window --resize left:-50:0 \
+										yabai -m window --resize right:-50:0
+rshift + ralt - j : yabai -m window --resize bottom:0:50 \
+										yabai -m window --resize top:0:50
+rshift + ralt - k : yabai -m window --resize top:0:-50 \
+										yabai -m window --resize bottom:0:-50
+rshift + ralt - l : yabai -m window --resize right:50:0 \
+										yabai -m window --resize left:50:0
+rshift + ralt - m : yabai -m space --balance
 
-# decrease window size
-# shift + cmd - s : yabai -m window --resize bottom:0:-20
-# shift + cmd - w : yabai -m window --resize top:0:20
 
-# set insertion point in focused container
-# ctrl + alt - h : yabai -m window --insert west
+# ralt + u -> rotate
+ralt - u : yabai -m space --rotate 90
+ralt + rshift - u : yabai -m space --rotate 270
 
-# toggle window zoom
-# alt - d : yabai -m window --toggle zoom-parent
-alt - f : yabai -m window --toggle zoom-fullscreen
 
-# toggle window split type
-alt - e : yabai -m window --toggle split
+# ralt + i -> mirror
+ralt - i : yabai -m space --mirror y-axis
+ralt + rshift - i : yabai -m space --mirror x-axis
 
-# float / unfloat window and center on screen
-# alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# ralt + o -> toggle zoom
+alt - o : yabai -m window --toggle zoom-parent
+shift + alt - o : yabai -m window --toggle zoom-fullscreen
+
+
+# ralt + p -> toggle float
+ralt - p : yabai -m window --toggle float --grid 4:4:1:1:2:2
+rshift - p : yabai -m window --toggle float --grid 10:30:7:2:16:6
+ralt + rshift - p : yabai -m window --toggle float --grid 20:20:1:1:18:18
+
 
 # toggle sticky(+float), topmost, picture-in-picture
-# alt - p : yabai -m window --toggle sticky --toggle topmost --toggle pip
-# App shortcuts 
-alt - c : open -a 'Visual Studio Code'
-alt - p : open -a 'Adobe Premiere Pro 2024'
-alt - s : open -a 'Slack'
-alt - i : open -a 'Alacritty'
-alt - b : open -a 'Brave Browser'
-alt - m : open -a 'Spotify'
-alt - n : open -a 'Notion'
-alt - o : open -a 'Obsidian'
-alt - d : open -a 'Discord'
-alt - a : open -a 'ChatGPT'
-alt - u : open -a 'Google Chrome'
-alt - r : open -a 'OBS'
+ralt - b : yabai -m window --toggle sticky --toggle topmost --toggle pip
