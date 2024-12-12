@@ -65,7 +65,7 @@ yabai -m config external_bar               all:0:0     \
 echo "yabai configuration loaded.."
 
 # Exclude problematic apps from being managed:
-yabai -m rule --add app="^(Software Update|Dictionary|VLC|System Preferences|System Settings|zoom.us|Photo Booth|Archive Utility|App Store|Activity Monitor)$" manage=off
+yabai -m rule --add app="^(Software Update|Dictionary|VLC|System Preferences|System Settings|zoom.us|Photo Booth|Archive Utility|App Store|Activity Monitor|General)$" manage=off
 yabai -m signal --add app='Safari' event='window_title_changed' action="yabai -m rule --apply app='Safari' title='Connexion' manage=off"
 yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
 yabai -m rule --add label="Open" title="Open" manage=off

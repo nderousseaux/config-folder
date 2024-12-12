@@ -1,15 +1,11 @@
 #!/bin/bash
 
 calendar=(
-  icon=cal
-  
-
-  # label.width=45
-  # label.align=right
+  label.padding_left=10
+  label.font="$FONT:Black:12.0"
   update_freq=30
   script="$PLUGIN_DIR/calendar.sh"
-  
-
+  click_script="open -a 'Calendar'"
 )
 
 sketchybar --add item calendar right       \
