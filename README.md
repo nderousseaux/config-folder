@@ -4,12 +4,12 @@ I use skhd and yabai to manage my windows and shortcuts.
 ## Attribution of apps
 I attribute my apps to my spaces like this:
 - 1 : Free, for temporary windows
-- 2 : Browser
-- 3 : Code
-- 4 : Terminal
-- 5 : Notes
-- 6 : Mail
-- 7 : Chat (Messages, Discord, Messenger)
+- 2 : Free, for temporary windows
+- 3 : Browser
+- 4 : IDE
+- 5 : Terminal
+- 6 : Notes
+- 7 : Communication (Messages, Discord, Messenger, Mail, etc...
 - 8 : Calendar/Reminder
 - 9 : Music or Free
 

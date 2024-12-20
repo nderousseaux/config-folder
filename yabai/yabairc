@@ -78,19 +78,19 @@ yabai -m config layout bsp
 
 
 # move some apps automatically to specific spaces
-yabai -m rule --add app="Safari" space=^2
+yabai -m rule --add app="Safari" space=^3
 
-yaabai -m rule --add app="Code" space=^3
+yabai -m rule --add app="Code" space=^4
 
-yabai -m rule --add app="Hyper" space=^4
+yabai -m rule --add app="Hyper" space=^5
 
-yabai -m rule --add app="Notes" space=^5
+yabai -m rule --add app="Notes" space=^6
 
-yabai -m rule --add app="Mail" space=^6
-
+yabai -m rule --add app="Mail" space=^7
 yabai -m rule --add app="Discord" space=^7
 yabai -m rule --add app="Messages" space=^7
 yabai -m rule --add app="Messenger" space=^7
+yabai -m rule --add app="Slack" space=^7
 
 yabai -m rule --add app="Reminders" space=^8
 yabai -m rule --add app="Calendar" space=^8
