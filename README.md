@@ -48,11 +48,11 @@ will focus the most recent window, `rshift + 1` will focus the first space, etc.
 - `rshift + a` : Visual Studio Code
 - `rshift + z` : Hyper
 - `rshift + e` : Safari
-- `rshift + r` : Reminders
-- `rshift + q` : Calendar
-- `rshift + s` : Messages
-- `rshift + d` : Messenger
-- `rshift + f` : Finder
+- `rshift + r` : Finder
+- `rshift + q` : Reminders
+- `rshift + s` : Calendar
+- `rshift + d` : Messages
+- `rshift + f` : Messenger
 - `rshift + w` : Notes
 - `rshift + x` : Mail
 - `rshift + c` : Music
