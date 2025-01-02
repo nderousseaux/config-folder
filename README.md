@@ -5,9 +5,9 @@ I use skhd and yabai to manage my windows and shortcuts.
 I attribute my apps to my spaces like this:
 - 1 : Free, for temporary windows
 - 2 : Free, for temporary windows
-- 3 : Browser
-- 4 : IDE
-- 5 : Terminal
+- 3 : Terminal, or free when I don't code
+- 4 : IDE, or free when I don't code
+- 5 : Browser
 - 6 : Notes
 - 7 : Communication (Messages, Discord, Messenger, Mail, etc...
 - 8 : Calendar/Reminder
