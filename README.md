@@ -50,8 +50,8 @@ will focus the most recent window, `rshift + 1` will focus the first space, etc.
 - `rshift + e` : Safari
 - `rshift + r` : Reminders
 - `rshift + q` : Calendar
-- `rshift + s` : Messenger
-- `rshift + d` : Messages
+- `rshift + s` : Messages
+- `rshift + d` : Messenger
 - `rshift + f` : Finder
 - `rshift + w` : Notes
 - `rshift + x` : Mail

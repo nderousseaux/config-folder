@@ -8,8 +8,8 @@ rshift - z : open -a 'Hyper'
 rshift - e : open -a 'Safari'
 rshift - r : open -a 'Reminders'
 rshift - q : open -a 'Calendar'
-rshift - s : open -a 'Messenger'
-rshift - d : open -a 'Messages'
+rshift - s : open -a 'Messages'
+rshift - d : open -a 'Messenger'
 rshift - f : open -a 'Finder'
 rshift - w : open -a 'Notes'
 rshift - x : open -a 'Mail'
@@ -120,9 +120,3 @@ ralt + rshift - p : yabai -m window --toggle float --grid 20:20:1:1:18:18
 
 # toggle sticky(+float), topmost, picture-in-picture
 ralt - b : yabai -m window --toggle sticky --toggle topmost --toggle pip
-
-
-# lalt - space : yabai -m window --toggle float; sketchybar --trigger window_focus
-# shift + lalt - f : yabai -m window --toggle zoom-fullscreen; sketchybar --trigger window_focus
-# lalt - f : yabai -m window --toggle zoom-parent; sketchybar --trigger window_focus
-# shift + lalt - 1 : yabai -m window --space 1 && sketchybar --trigger windows_on_spaces
