@@ -85,16 +85,15 @@ yabai -m rule --add app="Safari" space=^5
 yabai -m rule --add app="Notes" space=^6
 
 yabai -m rule --add app="Mail" space=^7
-yabai -m rule --add app="Discord" space=^7
-yabai -m rule --add app="Messages" space=^7
-yabai -m rule --add app="Messenger" space=^7
 yabai -m rule --add app="Slack" space=^7
 
 yabai -m rule --add app="Reminders" space=^8
 yabai -m rule --add app="Calendar" space=^8
 
 yabai -m rule --add app="Music" space=^9
-
+yabai -m rule --add app="Discord" space=^9
+yabai -m rule --add app="Messages" space=^9
+yabai -m rule --add app="Messenger" space=^9
 
 
 yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"

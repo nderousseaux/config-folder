@@ -9,9 +9,9 @@ I attribute my apps to my spaces like this:
 - 4 : IDE, or free when I don't code
 - 5 : Browser
 - 6 : Notes
-- 7 : Communication (Messages, Discord, Messenger, Mail, etc...
+- 7 : Pro communication (Mail, Slack, etc...
 - 8 : Calendar/Reminder
-- 9 : Music or Free
+- 9 : Music or Communication (Messenger, etc...)
 
 ## Cheatsheet
 Here my cheatsheet for my shortcuts.
