@@ -59,3 +59,23 @@ will focus the most recent window, `rshift + 1` will focus the first space, etc.
 
 ### Special shortcuts
 - `ralt + y` : On/Off yabai
+
+
+## Git emoji
+
+I use the following prefixes for my commit messages:
+```shell
+PREFIX_BASE="📦 base"
+PREFIX_FEAT="✨ feat"
+PREFIX_DESIGN="🎨 design"
+PREFIX_FIX="🐛 fix"
+PREFIX_TEST="🧪 test"
+PREFIX_BUILD="🏗️ build"
+PREFIX_STRUCT="🧱 struct"
+PREFIX_DOC="📚 doc"
+PREFIX_INTERNAL="🔧 internal"
+PREFIX_PERF="⚡️ perf"
+PREFIX_REFACTOR="🚜 refractor"
+PREFIX_TYPO="✏️ typo"
+PREFIX_WIP="🚧 wip"
+```
