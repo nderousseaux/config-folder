@@ -1,0 +1,21 @@
+#!/bin/bash
+
+COMMIT_MSG_FILE=$1
+PREFIX_FEAT="✨ feat"
+PREFIX_FIX="🐛 fix"
+PREFIX_REFACTOR="🔨 refactor"
+
+# Ajoute un emoji si le message commence par "feat"
+if grep -q "^feat" "$COMMIT_MSG_FILE"; then
+    sed -i "s/^feat/$PREFIX_FEAT/" "$COMMIT_MSG_FILE"
+fi
+
+# Ajoute un emoji si le message commence par "fix"
+if grep -q "^fix" "$COMMIT_MSG_FILE"; then
+    sed -i "s/^fix/$PREFIX_FIX/" "$COMMIT_MSG_FILE"
+fi
+
+# Ajoute un emoji si le message commence par "refactor"
+if grep -q "^refactor" "$COMMIT_MSG_FILE"; then
+    sed -i "s/^refactor/$PREFIX_REFACTOR/" "$COMMIT_MSG_FILE"
+fi
