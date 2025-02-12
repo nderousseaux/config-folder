@@ -11,7 +11,7 @@ PREFIX_STRUCT="🧱 struct"
 PREFIX_DOC="📚 doc"
 PREFIX_INTERNAL="🔧 internal"
 PREFIX_PERF="⚡️ perf"
-PREFIX_REFACTOR="🚜 refractor"
+PREFIX_REFACTOR="🚜 refactor"
 PREFIX_TYPO="✏️ typo"
 PREFIX_WIP="🚧 wip"
 

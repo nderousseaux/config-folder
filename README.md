@@ -60,7 +60,6 @@ will focus the most recent window, `rshift + 1` will focus the first space, etc.
 ### Special shortcuts
 - `ralt + y` : On/Off yabai
 
-
 ## Git emoji
 
 I use the following prefixes for my commit messages:

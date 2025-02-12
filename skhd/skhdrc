@@ -109,7 +109,7 @@ ralt + rshift - i : yabai -m space --mirror x-axis
 
 # ralt + o -> toggle zoom
 alt - o : yabai -m window --toggle zoom-parent
-shift + alt - o : yabai -m window --toggle zoom-fullscreen
+rshift + ralt - o : yabai -m window --toggle zoom-fullscreen
 
 
 # ralt + p -> toggle float
@@ -120,3 +120,6 @@ ralt + rshift - p : yabai -m window --toggle float --grid 20:20:1:1:18:18
 
 # toggle sticky(+float), topmost, picture-in-picture
 ralt - b : yabai -m window --toggle sticky --toggle topmost --toggle pip
+
+# Resize to code size
+rshift + ralt - 0x27 : yabai -m window --resize abs:1000:1000
