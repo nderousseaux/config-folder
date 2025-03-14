@@ -1,22 +1,4 @@
 # ################################################################ #
-# Application Launchers
-# ################################################################ #
-
-# rshift -> focus
-rshift - a : open -a 'Visual Studio Code'
-rshift - z : open -a 'Hyper'
-rshift - e : open -a 'Safari'
-rshift - r : open -a 'Finder'
-rshift - q : open -a 'Calendar'
-rshift - s : open -a 'Reminders'
-rshift - d : open -a 'Messages'
-rshift - f : open -a 'Messenger'
-rshift - w : open -a 'Mail'
-rshift - x : open -a 'Notes'
-rshift - c : open -a 'Music'
-
-
-# ################################################################ #
 # Spaces Organization
 # ################################################################ #
 
@@ -30,7 +12,7 @@ rshift - 0x16 : yabai -m space --focus 6
 rshift - 0x1A : yabai -m space --focus 7
 rshift - 0x1C : yabai -m space --focus 8
 rshift - 0x19 : yabai -m space --focus 9
-rshift - 0x1D : yabai -m space --focus recent
+rshift - 0x1D : yabai -m space --focus 10
 
 # ralt -> move
 ralt - 0x12 : yabai -m window --space 1
@@ -42,7 +24,7 @@ ralt - 0x16 : yabai -m window --space 6
 ralt - 0x1A : yabai -m window --space 7
 ralt - 0x1C : yabai -m window --space 8
 ralt - 0x19 : yabai -m window --space 9
-ralt - 0x1D : yabai -m window --space recent
+ralt - 0x1D : yabai -m window --space 10
 
 # ralt + rshift -> move and follow focus
 rshift + ralt - 0x12 : yabai -m window --space 1; yabai -m space --focus 1
@@ -54,72 +36,4 @@ rshift + ralt - 0x16 : yabai -m window --space 6; yabai -m space --focus 6
 rshift + ralt - 0x1A : yabai -m window --space 7; yabai -m space --focus 7
 rshift + ralt - 0x1C : yabai -m window --space 8; yabai -m space --focus 8
 rshift + ralt - 0x19 : yabai -m window --space 9; yabai -m space --focus 9
-rshift + ralt - 0x1D : yabai -m window --space recent; yabai -m space --focus recent
-
-# ################################################################ #
-# Window Management
-# ################################################################ #
-
-# Start/Stop Yabai
-ralt - y : if ! pgrep -q yabai; then yabai --start-service; else yabai --stop-service; fi
-
-
-# rshift -> focus
-rshift - h : yabai -m window --focus west
-rshift - j : yabai -m window --focus south
-rshift - k : yabai -m window --focus north
-rshift - l : yabai -m window --focus east
-rshift - m : yabai -m window --focus recent
-
-# ralt -> move
-ralt - h : yabai -m window --warp west
-ralt - j : yabai -m window --warp south
-ralt - k : yabai -m window --warp north
-ralt - l : yabai -m window --warp east
-ralt - m : yabai -m window --warp recent
-
-# rcmd -> swap
-rcmd - h : yabai -m window --swap west
-rcmd - j : yabai -m window --swap south
-rcmd - k : yabai -m window --swap north
-rcmd - l : yabai -m window --swap east
-rcmd - m : yabai -m window --swap recent
-
-# rcmd + ralt -> resize
-rshift + ralt - h : yabai -m window --resize left:-50:0 \
-										yabai -m window --resize right:-50:0
-rshift + ralt - j : yabai -m window --resize bottom:0:50 \
-										yabai -m window --resize top:0:50
-rshift + ralt - k : yabai -m window --resize top:0:-50 \
-										yabai -m window --resize bottom:0:-50
-rshift + ralt - l : yabai -m window --resize right:50:0 \
-										yabai -m window --resize left:50:0
-rshift + ralt - m : yabai -m space --balance
-
-
-# ralt + u -> rotate
-ralt - u : yabai -m space --rotate 90
-ralt + rshift - u : yabai -m space --rotate 270
-
-
-# ralt + i -> mirror
-ralt - i : yabai -m space --mirror y-axis
-ralt + rshift - i : yabai -m space --mirror x-axis
-
-
-# ralt + o -> toggle zoom
-alt - o : yabai -m window --toggle zoom-parent
-rshift + ralt - o : yabai -m window --toggle zoom-fullscreen
-
-
-# ralt + p -> toggle float
-ralt - p : yabai -m window --toggle float --grid 4:4:1:1:2:2
-rshift - p : yabai -m window --toggle float --grid 10:30:7:2:16:6
-ralt + rshift - p : yabai -m window --toggle float --grid 20:20:1:1:18:18
-
-
-# toggle sticky(+float), topmost, picture-in-picture
-ralt - b : yabai -m window --toggle sticky --toggle topmost --toggle pip
-
-# Resize to code size
-rshift + ralt - 0x27 : yabai -m window --resize abs:1000:1000
+rshift + ralt - 0x1D : yabai -m window --space 10; yabai -m space --focus 10

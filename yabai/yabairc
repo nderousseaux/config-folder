@@ -1,25 +1,7 @@
-#!/usr/bin/env zsh
-
-# the scripting-addition must be loaded manually if
-# you are running yabai on macOS Big Sur. Uncomment
-# the following line to have the injection performed
-# when the config is executed during startup.
-#
-# for this to work you must configure sudo such that
-# it will be able to run the command without password
-#
-# see this wiki page for information:
-#  - https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)
-#
+#!/usr/bin/env bash
 
 # Unload the macOS WindowManager process
 launchctl unload -F /System/Library/LaunchAgents/com.apple.WindowManager.plist > /dev/null 2>&1 &
-
-# $HOME/.config/yabai/store_windows.sh
-
-# To restore a window, run this command:
-#   yabai -m window --toggle float &&
-#     /tmp/yabai-restore/$(yabai -m query --windows --window | jq -re '.id').restore
 
 # global settings
 yabai -m config external_bar               all:0:0     \
@@ -57,42 +39,18 @@ yabai -m config external_bar               all:0:0     \
 
 echo "yabai configuration loaded.."
 
-# Exclude problematic apps from being managed:
-yabai -m rule --add app="^(Software Update|Dictionary|VLC|System Preferences|System Settings|zoom.us|Photo Booth|Archive Utility|App Store|Activity Monitor|General)$" manage=off
-yabai -m signal --add app='Safari' event='window_title_changed' action="yabai -m rule --apply app='Safari' title='Connexion' manage=off"
-yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
-yabai -m rule --add label="Open" title="Open" manage=off
-yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
-# Fix new tab in Finder
-yabai -m signal --add app='^Finder$' event=window_created action='yabai -m space --focus next; sleep 0.01; yabai -m space --focus prev'
-yabai -m signal --add app='^Finder$' event=window_destroyed action='yabai -m space --focus next; sleep 0.01; yabai -m space --focus prev'
+yabai -m config layout float
 
-yabai -m config layout bsp
+# Load app spaces var from vars.sh
+source ~/.config/vars.sh
 
+for index in "${app_spaces[@]}" ; do
+    KEY="${index%%::*}"
+    VALUE="${index##*::}"
+		echo "yabai -m signal --add app='$KEY' event=application_launched action=yabai -m window --space $VALUE; yabai -m space --focus $VALUE"
+    yabai -m signal --add app="$KEY" event=application_launched action="yabai -m window --space $VALUE; yabai -m space --focus $VALUE"
+done
 
-# move some apps automatically to specific spaces
-yabai -m rule --add app="Hyper" space=^3
-
-yabai -m rule --add app="Code" space=^4
-
-yabai -m rule --add app="Safari" space=^5
-
-yabai -m rule --add app="Notes" space=^6
-
-yabai -m rule --add app="Mail" space=^7
-yabai -m rule --add app="Slack" space=^7
-
-yabai -m rule --add app="Reminders" space=^8
-yabai -m rule --add app="Calendar" space=^8
-
-yabai -m rule --add app="Music" space=^9
-yabai -m rule --add app="Discord" space=^9
-yabai -m rule --add app="Messages" space=^9
-yabai -m rule --add app="Messenger" space=^9
-
-# Reaction to events
 # If dock restarts, reload the scripting-addition
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
-
-
