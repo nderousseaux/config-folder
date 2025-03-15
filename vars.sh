@@ -18,6 +18,7 @@ app_spaces=(
 
 	'Mail::9'
 	'Slack::9'
+	'Rocket.Chat::9'
 
 	'WhatsApp::10'
 	'Discord::10'

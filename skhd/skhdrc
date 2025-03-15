@@ -1,4 +1,24 @@
 # ################################################################ #
+# Application Launcher
+# ################################################################ #
+
+rshift - a : open -a 'Visual Studio Code'
+rshift - z : open -a 'Hyper'
+rshift - e : open -a 'Safari'
+rshift - r : open -a 'typora'
+
+rshift - q : open -a 'Calendar'
+rshift - s : open -a 'Reminders'
+rshift - d : open -a 'Notes'
+rshift - f : open -a 'Finder'
+
+rshift - w : open -a 'Mail'
+rshift - x : open -a 'Messages'
+rshift - c : open -a 'Messenger'
+rshift - v : open -a 'Music'
+
+
+# ################################################################ #
 # Spaces Organization
 # ################################################################ #
 

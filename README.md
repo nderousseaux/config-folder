@@ -1,6 +1,7 @@
 # My configuration
 
 ## Apps
+
 Whith `yabai`, each app is assigned to a space : 
 1. Console / bdd
 2. backend / figma
@@ -15,6 +16,21 @@ Whith `yabai`, each app is assigned to a space :
 
 ## Shortcuts
 I use `skhd` and `yabai` to manage my windows and shortcuts.
+
+### Apps control
+`rshift + a` : VSCode
+`rshift + z` : Hyper
+`rshift + e` : Safari
+`rshift + r` : Typora
+`rshift + q` : Calendar
+`rshift + s` : Reminders
+`rshift + d` : Notes
+`rshift + f` : Finder
+`rshift + w` : Mail
+`rshift + x` : Messages
+`rshift + c` : Messenger
+`rshift + v` : Music
+
 
 ### Space control
 For navigation between spaces, I use the following shortcuts, with `skhd`:
