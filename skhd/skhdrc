@@ -17,6 +17,17 @@ rshift - x : open -a 'Messages'
 rshift - c : open -a 'Messenger'
 rshift - v : open -a 'Music'
 
+# ################################################################ #
+# Size of windows
+# ################################################################ #
+
+ralt - a : yabai -m window --grid $(source ~/.config/vars.sh; echo $SIZE_ALL)
+ralt - z : yabai -m window --resize $(source ~/.config/vars.sh; echo $SIZE_BIG)
+ralt - e : yabai -m window --resize $(source ~/.config/vars.sh; echo $SIZE_MEDIUM)
+ralt - r : yabai -m window --resize $(source ~/.config/vars.sh; echo $SIZE_SMALL)
+ralt - q : yabai -m window --resize $(source ~/.config/vars.sh; echo $SIZE_PORTRAIT_BIG)
+ralt - s : yabai -m window --resize $(source ~/.config/vars.sh; echo $SIZE_PORTRAIT_MEDIUM)
+ralt - d : yabai -m window --resize $(source ~/.config/vars.sh; echo $SIZE_PORTRAIT_SMALL)
 
 # ################################################################ #
 # Spaces Organization
