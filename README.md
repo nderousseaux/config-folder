@@ -17,6 +17,26 @@ Whith `yabai`, each app is assigned to a space :
 ## Shortcuts
 I use `skhd` and `yabai` to manage my windows and shortcuts.
 
+`ralt + y` : Restart yabai
+
+### Move windows
+`ralt + t` : Move the current window at center
+`ralt + g` : Swap all windows on the current space (clockwise)
+`ralt + b` : Swap all windows on the current space (counter clockwise)
+`ralt + h` : Swap the current window with the window on the left
+`ralt + j` : Swap the current window with the window on the bottom
+`ralt + k` : Swap the current window with the window on the top
+`ralt + l` : Swap the current window with the window on the right
+
+### Focus windows
+`rshift + t` : Focus the last window
+`rshift + g` : Focus the window on the current space (clockwise)
+`rshift + b` : Focus the window on the current space (counter clockwise)
+`rshift + h` : Focus the window on the left
+`rshift + j` : Focus the window on the bottom
+`rshift + k` : Focus the window on the top
+`rshift + l` : Focus the window on the right
+
 ### Apps control
 `rshift + a` : VSCode
 `rshift + z` : Hyper
