@@ -44,13 +44,14 @@ rshift - v : open -a 'Music'
 # Size of windows
 # ################################################################ #
 
-ralt - a : yabai -m window --grid $(source ~/.config/vars.sh; echo $SIZE_ALL)
-ralt - z : yabai -m window --resize $(source ~/.config/vars.sh; echo $SIZE_BIG) 
-ralt - e : yabai -m window --resize $(source ~/.config/vars.sh; echo $SIZE_MEDIUM) 
-ralt - r : yabai -m window --resize $(source ~/.config/vars.sh; echo $SIZE_SMALL) 
-ralt - q : yabai -m window --resize $(source ~/.config/vars.sh; echo $SIZE_PORTRAIT_BIG) 
-ralt - s : yabai -m window --resize $(source ~/.config/vars.sh; echo $SIZE_PORTRAIT_MEDIUM) 
-ralt - d : yabai -m window --resize $(source ~/.config/vars.sh; echo $SIZE_PORTRAIT_SMALL) 
+ralt - a : yabai -m window --resize $(source ~/.config/vars.sh; echo $SIZE_BIG) 
+ralt - z : yabai -m window --resize $(source ~/.config/vars.sh; echo $SIZE_MEDIUM) 
+ralt - e : yabai -m window --resize $(source ~/.config/vars.sh; echo $SIZE_SMALL) 
+ralt - r : yabai -m window --resize $(source ~/.config/vars.sh; echo $SIZE_TINY)
+ralt - q : yabai -m window --grid $(source ~/.config/vars.sh; echo $SIZE_ALL)
+ralt - s : yabai -m window --resize $(source ~/.config/vars.sh; echo $SIZE_PORTRAIT_BIG) 
+ralt - d : yabai -m window --resize $(source ~/.config/vars.sh; echo $SIZE_PORTRAIT_MEDIUM) 
+ralt - f : yabai -m window --resize $(source ~/.config/vars.sh; echo $SIZE_PORTRAIT_SMALL) 
 
 # ################################################################ #
 # Spaces Organization

@@ -52,13 +52,14 @@ I use `skhd` and `yabai` to manage my windows and shortcuts.
 `rshift + v` : Music
 
 ### Size control
-`ralt + a`: Resize window for taking all space
-`ralt + z`: Resize big
-`ralt + e`: Resize middle
-`ralt + r`: Resize little
-`ralt + q`: Resize big vertical
-`ralt + s`: Resize middle vertical
-`ralt + d`: Resize little vertical
+`ralt + a`: Resize big
+`ralt + z`: Resize middle
+`ralt + e`: Resize little
+`ralt + r`: Resize tiny
+`ralt + q`: Resize window for taking all space
+`ralt + s`: Resize big vertical
+`ralt + d`: Resize middle vertical
+`ralt + f`: Resize little vertical
 
 ### Space control
 For navigation between spaces, I use the following shortcuts, with `skhd`:
