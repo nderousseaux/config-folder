@@ -54,12 +54,21 @@ I use `skhd` and `yabai` to manage my windows and shortcuts.
 ### Size control
 `ralt + a`: Resize big
 `ralt + z`: Resize middle
-`ralt + e`: Resize little
+`ralt + e`: Resize small
 `ralt + r`: Resize tiny
 `ralt + q`: Resize window for taking all space
 `ralt + s`: Resize big vertical
 `ralt + d`: Resize middle vertical
-`ralt + f`: Resize little vertical
+`ralt + f`: Resize small vertical
+
+### Layout control
+<!-- `rcmd + a`: 50/50 (if there are more than 2 windows, the horizontal split is 50/50)
+`rcmd + z`: 60/40 (if there are more than 2 windows, the horizontal split is 50/50)
+`rcmd + e`: big, code (if there are more than 2 windows, the horizontal split is 50/50)
+`rcmd + r`: center size middle, and hide all other windows
+`rcmd + q`: center size medium if there are one window, medium and small if there are two windows and medium, small and little vertical if there are three windows -->
+
+<!-- `rcmd + v` : close all apps -->
 
 ### Space control
 For navigation between spaces, I use the following shortcuts, with `skhd`:
