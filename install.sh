@@ -138,4 +138,32 @@ echo "🔄 Configuring zsh..."
 cp "$(dirname "$0")/.zshrc" ~/.zshrc
 echo "✅ zsh configured."
 
+# Step 6: Install and configure tmux
+if ! command -v tmux &> /dev/null; then
+    echo "🔍 tmux not found. Installing tmux..."
+    brew install tmux
+    echo "✅ tmux installed."
+else
+    echo "✅ tmux is already installed."
+fi
+# Copy the .tmux.conf configuration file
+echo "🔄 Configuring tmux..."
+cp "$(dirname "$0")/.tmux.conf" ~/.tmux.conf
+
+# Update the colors in .tmux.conf using colors from colors.sh
+echo "🎨 Updating tmux colors..."
+
+# Replace base colors in tmux configuration
+tmux_replacements=0
+for color_entry in "${COLORS[@]}"; do
+    color_name="${color_entry%:*}"
+    color_value="${color_entry#*:}"
+    # Count replacements made
+    before_count=$(grep -o "\${colors\.$color_name}" ~/.tmux.conf | wc -l | tr -d ' ')
+    sed -i '' "s/\\\${colors\\.$color_name}/$color_value/g" ~/.tmux.conf
+    tmux_replacements=$((tmux_replacements + before_count))
+done
+
+echo "✅ tmux configured with $tmux_replacements color replacements."
+
 echo "🎉 Setup complete! Please restart your terminal to apply all changes."

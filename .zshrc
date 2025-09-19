@@ -2,7 +2,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="sober"
 source $ZSH/oh-my-zsh.sh
-plugins=(git virtualenv zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git virtualenv zsh-syntax-highlighting zsh-autosuggestions tmux)
 
 #Couleur des fichiers
 export CLICOLOR=1
