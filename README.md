@@ -9,3 +9,4 @@ The script does the following:
 - Install xcode command line tools if not installed.
 - Install `homebrew` if not installed.
 - Install and configure `hyper` terminal.
+- Install and configure `zsh` shell with `oh-my-zsh`.

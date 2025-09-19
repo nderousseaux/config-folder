@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # Step 1: Install Xcode Command Line Tools
 if ! xcode-select -p &> /dev/null; then
@@ -81,3 +81,61 @@ done
 
 total_replacements=$((${#COLORS[@]} + ${#CONFIG_VARS[@]}))
 echo "✅ Updated $total_replacements variables in Hyper configuration (${#COLORS[@]} colors + ${#CONFIG_VARS[@]} config vars)"
+
+# Step 4: Install and configure zsh and oh-my-zsh 
+if ! command -v zsh &> /dev/null; then
+    echo "🔍 zsh not found. Installing zsh..."
+    brew install zsh
+    echo "✅ zsh installed."
+else
+    echo "✅ zsh is already installed."
+fi
+
+# Step 5: Install oh-my-zsh if not installed
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+    echo "🔍 oh-my-zsh not found. Installing oh-my-zsh..."
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+    echo "✅ oh-my-zsh installed." 
+else
+    echo "✅ oh-my-zsh is already installed."
+fi
+
+# Install zsh-syntax-highlighting plugin
+if [ ! -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting" ]; then
+    echo "🔍 zsh-syntax-highlighting plugin not found. Installing..."
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    echo "✅ zsh-syntax-highlighting plugin installed."
+else
+    echo "✅ zsh-syntax-highlighting plugin is already installed."
+fi
+
+# Install zsh-autosuggestions plugin
+if [ ! -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions" ]; then
+    echo "🔍 zsh-autosuggestions plugin not found. Installing..."
+    git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    echo "✅ zsh-autosuggestions plugin installed."
+else
+    echo "✅ zsh-autosuggestions plugin is already installed."
+fi
+
+# Install autojump
+if ! command -v autojump &> /dev/null; then
+    echo "🔍 autojump not found. Installing autojump..."
+    brew install autojump
+    echo "✅ autojump installed."
+else
+    echo "✅ autojump is already installed."
+fi
+
+# Move my theme to oh-my-zsh custom themes directory
+echo "🔍 Installing sober theme..."
+mkdir -p ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes
+cp "$(dirname "$0")/sober.zsh-theme" ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/sober.zsh-theme
+echo "✅ sober theme installed."
+
+# Copy the .zshrc configuration file
+echo "🔄 Configuring zsh..."
+cp "$(dirname "$0")/.zshrc" ~/.zshrc
+echo "✅ zsh configured."
+
+echo "🎉 Setup complete! Please restart your terminal to apply all changes."
