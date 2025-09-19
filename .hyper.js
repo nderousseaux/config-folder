@@ -20,22 +20,22 @@ module.exports = {
         // letter spacing as a relative unit
         letterSpacing: 0,
         // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-        cursorColor: '#5C6370',
+        cursorColor: '${colors.cursorColor}',
         // terminal text color under BLOCK cursor
-        cursorAccentColor: '#000',
+        cursorAccentColor: '${colors.cursorAccentColor}',
         // `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for ???
         cursorShape: 'BLOCK',
         // set to `true` (without backticks and without quotes) for blinking cursor
         cursorBlink: true,
         // color of the text
-        foregroundColor: '#ABB2BF',
+        foregroundColor: '${colors.foregroundColor}',
         // terminal background color
         // opacity is only supported on macOS
-        backgroundColor: '#282c34',
+        backgroundColor: '${colors.backgroundColor}',
         // terminal selection color
-        selectionColor: '#34373f',
+        selectionColor: '${colors.selectionColor}',
         // border color (window, tabs)
-        borderColor: '#282c34',
+        borderColor: '${colors.borderColor}',
         // custom CSS to embed in the main window
         css: '',
         // custom CSS to embed in the terminal window
@@ -55,24 +55,24 @@ module.exports = {
         // including the 6 x 6 color cubes and the grayscale map, just provide
         // an array here instead of a color map object
         colors: {
-            black: '#1E2127',
-            red: '#E06C75',
-            green: '#98C379',
-            yellow: '#D19A66',
-            blue: '#61AFEF',
-            magenta: '#C678DD',
-            cyan: '#56B6C2',
-            white: '#ABB2BF',
-            lightBlack: '#5C6370',
-            lightRed: '#E06C75',
-            lightGreen: '#98C379',
-            lightYellow: '#D19A66',
-            lightBlue: '#61AFEF',
-            lightMagenta: '#C678DD',
-            lightCyan: '#56B6C2',
-            lightWhite: '#FFFFFF',
-            limeGreen: '#32CD32',
-            lightCoral: '#F08080',
+            black: '${colors.black}',
+            red: '${colors.red}',
+            green: '${colors.green}',
+            yellow: '${colors.yellow}',
+            blue: '${colors.blue}',
+            magenta: '${colors.magenta}',
+            cyan: '${colors.cyan}',
+            white: '${colors.white}',
+            lightBlack: '${colors.lightBlack}',
+            lightRed: '${colors.lightRed}',
+            lightGreen: '${colors.lightGreen}',
+            lightYellow: '${colors.lightYellow}',
+            lightBlue: '${colors.lightBlue}',
+            lightMagenta: '${colors.lightMagenta}',
+            lightCyan: '${colors.lightCyan}',
+            lightWhite: '${colors.lightWhite}',
+            limeGreen: '${colors.limeGreen}',
+            lightCoral: '${colors.lightCoral}',
         },
         // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
         // if left empty, your system's login shell will be used by default
@@ -130,6 +130,9 @@ module.exports = {
         // set to true to preserve working directory when creating splits or tabs
         preserveCWD: true,
         // for advanced config flags please refer to https://hyper.is/#cfg
+        hyperVibrance: {
+            vibrancy: 'ultra-dark',
+        }, 
     },
     // a list of plugins to fetch and install from npm
     // format: [@org/]project[#version]
@@ -137,11 +140,7 @@ module.exports = {
     //   `hyperpower`
     //   `@company/project`
     //   `project#1.0.1`
-    plugins: [
-        // "hyperpower"
-        // "hyper-github-dark", 
-        // "hyper-one-dark",
-    ],
+	plugins: ["hyper-hide-title", "hyper-vibrance"],
     // in development, you can create a directory under
     // `~/.hyper_plugins/local/` and include it here
     // to load it and avoid it being `npm install`ed
