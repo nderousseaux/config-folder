@@ -10,4 +10,5 @@ The script does the following:
 - Install `homebrew` if not installed.
 - Install and configure `hyper` terminal.
 - Install and configure `zsh` shell with `oh-my-zsh`.
+- Configure `ssh` client.
 - Install and configure `tmux` terminal multiplexer.

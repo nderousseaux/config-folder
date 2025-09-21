@@ -1,0 +1,27 @@
+Host *
+  AddKeysToAgent yes
+  IPQoS throughput
+
+#Parents
+Host parents
+	HostName parents.nderousseaux.fr
+	IdentityFile /Users/nderousseaux/.ssh/rsa_keys/priv/id_rsa_parents
+	User nderousseaux
+
+Host portable-papa
+    HostName 192.168.1.28
+    User cderousseaux
+    IdentityFile /Users/nderousseaux/.ssh/rsa_keys/priv/id_rsa_portable_papa
+    ProxyJump parents
+
+Host fixe-papa
+    HostName 192.168.1.33
+    User cderousseaux
+    ProxyJump parents
+    #Pas de clé privée, trop chiant à configurer sur un windows
+
+Host portable-vagno
+  # Remplace X.X.X.X par l'adresse IP publique de la box de Vagno
+	Hostname X.X.X.X 
+	User vagno
+	IdentityFile /Users/nderousseaux/.ssh/rsa_keys/priv/id_rsa_portable_vagno

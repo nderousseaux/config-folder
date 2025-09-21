@@ -138,7 +138,22 @@ echo "🔄 Configuring zsh..."
 cp "$(dirname "$0")/.zshrc" ~/.zshrc
 echo "✅ zsh configured."
 
-# Step 6: Install and configure tmux
+# Step 6: Configure SSH
+echo "🔄 Configuring SSH..."
+if [ ! -d ~/.ssh ]; then
+    mkdir -p ~/.ssh
+fi
+rm -rf ~/.ssh/config.d
+rm -f ~/.ssh/config
+cp "$(dirname "$0")/ssh/config" ~/.ssh/config
+cp -r "$(dirname "$0")/ssh/config.d" ~/.ssh/config.d
+rm -rf ~/.ssh/rsa_keys
+cp -r "$(dirname "$0")/ssh/rsa_keys" ~/.ssh/rsa_keys
+chmod 700 ~/.ssh/rsa_keys/priv
+chmod 600 ~/.ssh/rsa_keys/priv/*
+echo "✅ SSH configured."
+
+# Step 7: Install and configure tmux
 if ! command -v tmux &> /dev/null; then
     echo "🔍 tmux not found. Installing tmux..."
     brew install tmux
