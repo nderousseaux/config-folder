@@ -5,19 +5,20 @@
     - common paste
 
 # vim
-# git - next
-# ssh - next
+# git
+
+# zsh
+- bastion deconexion
 
 # hyper
 -> une barre sur le coté de hyper
-
 
 # Yabai  / skhd
 Suite un déplacement de space -> focus finder
  shift -> app ou space quand app en plein écran : pas d’animation de glissement 
 
-
 # d'autres dependencies
 colima
 docker
+vscode
 node

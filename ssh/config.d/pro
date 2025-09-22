@@ -1,0 +1,49 @@
+Host jade
+  User n.derousseaux
+  HostName jade.iutrs.unistra.fr
+  IdentityFile ~/.ssh/rsa_keys/priv/id_rsa_jade
+  UseKeychain yes
+
+Host p8
+  User root
+  HostName p8-cloud.iutrs.unistra.fr
+  IdentityFile ~/.ssh/rsa_keys/priv/id_rsa_p8
+  ProxyJump jade
+  UseKeychain yes
+
+Host bastion
+  User derousseaux
+  HostName zebastion.iutrs.unistra.fr
+  IdentityFile ~/.ssh/rsa_keys/priv/id_rsa_bastion
+  UseKeychain yes
+
+Host cfau-test
+  User root
+  IdentityFile ~/.ssh/rsa_keys/priv/id_rsa_p4_childs
+  ProxyJump jade
+  UseKeychain yes
+
+Host cfau-web1
+  User root
+  IdentityFile ~/.ssh/rsa_keys/priv/id_rsa_p4_childs
+  ProxyJump jade
+  UseKeychain yes
+
+Host cfau-test2
+  User root
+  IdentityFile ~/.ssh/rsa_keys/priv/id_rsa_p4_childs
+  ProxyJump jade
+  UseKeychain yes
+
+Host cfau-test-db
+  User root
+  IdentityFile ~/.ssh/rsa_keys/priv/id_rsa_p4_childs
+  ProxyJump jade
+  UseKeychain yes
+
+Host cle-prod-db.u-strasbg.fr
+  User root
+  IdentityFile ~/.ssh/rsa_keys/priv/id_rsa_p4_childs
+  ProxyJump jade
+  UseKeychain yes
+

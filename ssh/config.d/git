@@ -1,18 +1,18 @@
 Host gitlab.com
 	HostName gitlab.com
-	IdentityFile /Users/nderousseaux/.ssh/rsa_keys/priv/id_rsa_gitlab
+	IdentityFile ~/.ssh/rsa_keys/priv/id_rsa_gitlab
 	User git
 
 Host github.com
 	HostName github.com
-	IdentityFile /Users/nderousseaux/.ssh/rsa_keys/priv/id_rsa_github
+	IdentityFile ~/.ssh/rsa_keys/priv/id_rsa_github
 
 Host framagit.org
 	HostName framagit.org
-	IdentityFile /Users/nderousseaux/.ssh/rsa_keys/priv/id_rsa_framagit
+	IdentityFile ~/.ssh/rsa_keys/priv/id_rsa_framagit
 	User git
 
 Host git.unistra.fr
 	Hostname git.unistra.fr
-	IdentityFile /Users/nderousseaux/.ssh/rsa_keys/priv/id_rsa_git_unistra
+	IdentityFile ~/.ssh/rsa_keys/priv/id_rsa_git_unistra
 	User git

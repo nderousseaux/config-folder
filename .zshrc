@@ -1,8 +1,8 @@
 ############## OH-MY-ZSH ##############
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="sober"
-source $ZSH/oh-my-zsh.sh
 plugins=(git virtualenv zsh-syntax-highlighting zsh-autosuggestions tmux)
+source $ZSH/oh-my-zsh.sh
 
 #Couleur des fichiers
 export CLICOLOR=1
@@ -37,4 +37,5 @@ export CPLUS_INCLUDE_PATH="/Applications/Xcode.app/Contents/Developer/Platforms/
 
 
 ############## Alias ##############
+alias bssh="ssh -t bastion --"
 # alias dpda=" docker run --rm --volume "$PWD":/mnt --workdir /mnt -u 1000:1000 -i -t pdagog/refc"
