@@ -37,5 +37,5 @@ export CPLUS_INCLUDE_PATH="/Applications/Xcode.app/Contents/Developer/Platforms/
 
 
 ############## Alias ##############
-alias bssh="ssh -t bastion --"
+alias bssh='ssh -o ServerAliveInterval=10 -o ServerAliveCountMax=3 -t bastion --'
 # alias dpda=" docker run --rm --volume "$PWD":/mnt --workdir /mnt -u 1000:1000 -i -t pdagog/refc"
