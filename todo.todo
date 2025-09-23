@@ -1,18 +1,17 @@
-- bscp
 # tmux
-    - clic pour focus pane
-    - couleur du W
-    - resize pane (shorcut et souris)
-    - common paste
+- clic pour focus pane
+- couleur du W
+- resize pane (shorcut et souris)
+- common paste
 # vim
 # git
 # hyper
--> une barre sur le coté de hyper
+- une barre sur le coté de hyper
 # Yabai  / skhd
 Suite un déplacement de space -> focus finder
- shift -> app ou space quand app en plein écran : pas d’animation de glissement 
-# d'autres dependencies
-colima
-docker
-vscode
-node
+shift -> app ou space quand app en plein écran : pas d’animation de glissement 
+# vscode
+# autres
+- colima
+- docker
+- node
