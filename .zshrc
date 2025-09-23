@@ -11,9 +11,6 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 # Auto jump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
-############## CONFIG ##############
-export GIT_CONFIG_GLOBAL="~/.config/git/.gitconfig"
-
 ############## PATH ##############
 # Package managers
 export PATH="/opt/homebrew/bin:$PATH"

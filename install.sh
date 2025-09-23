@@ -166,7 +166,7 @@ if [ -d ~/.ssh ]; then
     echo "✅ Existing SSH configuration backed up to ~/.ssh.old"
 fi
 # Create a symbolic link to the SSH configuration directory
-cp -lR "$(dirname "$0")/.ssh" ~/.ssh
+cp -lR "$(dirname "$0")/ssh" ~/.ssh
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/rsa_keys/priv/*
 chmod 644 ~/.ssh/rsa_keys/pub/*
@@ -188,6 +188,13 @@ if ! command -v git &> /dev/null; then
 else
     echo "✅ git is already installed."
 fi
+if [ -f ~/.gitconfig ]; then
+    rm -f ~/.gitconfig.old
+    cp ~/.gitconfig ~/.gitconfig.old
+    rm -f ~/.gitconfig
+    echo "✅ Existing git configuration backed up to ~/.gitconfig.old"
+fi
+cp "$(dirname "$0")/git/config" ~/.gitconfig
 
 # Step 7: Install and configure tmux
 if ! command -v tmux &> /dev/null; then
