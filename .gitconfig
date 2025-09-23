@@ -1,0 +1,7 @@
+[user]
+	name = Nathanaël Derousseaux
+	email = n.derousseaux@unistra.fr
+[core]
+	excludesFile = ~/.gitignore
+[init]
+	templateDir = /Users/n.derousseaux/.config/git/template

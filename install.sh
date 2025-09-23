@@ -153,7 +153,20 @@ chmod 700 ~/.ssh/rsa_keys/priv
 chmod 600 ~/.ssh/rsa_keys/priv/*
 echo "✅ SSH configured."
 
-# Step 7: Install and configure tmux
+# Step 7: Install and configure git
+if ! command -v git &> /dev/null; then
+    echo "🔍 git not found. Installing git..."
+    brew install git
+    echo "✅ git installed."
+else
+    echo "✅ git is already installed."
+fi
+# Copy the .gitconfig configuration file
+echo "🔄 Configuring git..."
+cp "$(dirname "$0")/.gitconfig" ~/.gitconfig
+echo "✅ git configured."
+
+# Step 8: Install and configure tmux
 if ! command -v tmux &> /dev/null; then
     echo "🔍 tmux not found. Installing tmux..."
     brew install tmux

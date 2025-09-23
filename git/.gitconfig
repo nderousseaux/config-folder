@@ -1,0 +1,20 @@
+[user]
+	name = Nathanaël Derousseaux
+	email = n.derousseaux@icloud.com
+[merge]
+	ff = no
+[alias]
+	yolo = !git commit -m \"$(curl -s https://whatthecommit.com/index.txt)\"
+[core]
+	editor = vim
+	excludesfile = ~/.config/git/gitignore_global
+	hooksPath = ~/.config/git/hooks/
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[branch]
+	autosetuprebase = always
+[init]
+	templateDir = ~/.config/git/template

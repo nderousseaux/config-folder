@@ -15,6 +15,7 @@ PREFIX_REFACTOR="🚜 refactor"
 PREFIX_TYPO="✏️ typo"
 PREFIX_WIP="🚧 wip"
 PREFIX_META="📝 meta"
+PREFIX_CONFIG="⚙️ config"
 
 
 # Ajoute le bon emoji en fonction du type de commit
@@ -72,4 +73,8 @@ fi
 
 if grep -q "^meta" "$COMMIT_MSG_FILE"; then
     sed -i "s/^meta/$PREFIX_META/" "$COMMIT_MSG_FILE"
+fi
+
+if grep -q "^config" "$COMMIT_MSG_FILE"; then
+    sed -i "s/^config/$PREFIX_CONFIG/" "$COMMIT_MSG_FILE"
 fi

@@ -11,4 +11,5 @@ The script does the following:
 - Install and configure `hyper` terminal.
 - Install and configure `zsh` shell with `oh-my-zsh`.
 - Configure `ssh` client.
+- Install and configure `git`.
 - Install and configure `tmux` terminal multiplexer.
