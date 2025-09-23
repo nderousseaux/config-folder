@@ -1,14 +1,26 @@
 [user]
 	name = Nathanaël Derousseaux
 	email = n.derousseaux@icloud.com
+
 [merge]
 	ff = no
+
 [alias]
 	yolo = !git commit -m \"$(curl -s https://whatthecommit.com/index.txt)\"
+    install-hooks = "!f() { \
+        TEMPLATE=\"$HOME/.config/git/template/hooks\"; \
+        DEST=\"$(git rev-parse --git-path hooks)\"; \
+        mkdir -p \"$DEST\"; \
+        cp -a \"$TEMPLATE/\"* \"$DEST/\" 2>/dev/null || true; \
+        chmod +x \"$DEST/\"* 2>/dev/null || true; \
+        echo \"Hooks installés depuis $TEMPLATE vers $DEST\"; \
+    }; f"
+    work-user = !git config user.email "n.derousseaux@unistra.fr" && echo "Email set to work address"
+    perso-user = !git config user.email "n.derousseaux@icloud.com" && echo "Email set to personal address"
+
 [core]
 	editor = vim
-	excludesfile = ~/.config/git/gitignore_global
-	hooksPath = ~/.config/git/hooks/
+	excludesfile = ~/.config/git/.gitignore
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true

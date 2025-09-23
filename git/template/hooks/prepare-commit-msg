@@ -20,61 +20,61 @@ PREFIX_CONFIG="⚙️ config"
 
 # Ajoute le bon emoji en fonction du type de commit
 if grep -q "^base" "$COMMIT_MSG_FILE"; then
-    sed -i "s/^base/$PREFIX_BASE/" "$COMMIT_MSG_FILE"
+    sed -i "" "s/^base/$PREFIX_BASE/" "$COMMIT_MSG_FILE"
 fi
 
 if grep -q "^feat" "$COMMIT_MSG_FILE"; then
-    sed -i "s/^feat/$PREFIX_FEAT/" "$COMMIT_MSG_FILE"
+    sed -i "" "s/^feat/$PREFIX_FEAT/" "$COMMIT_MSG_FILE"
 fi
 
 if grep -q "^design" "$COMMIT_MSG_FILE"; then
-    sed -i "s/^design/$PREFIX_DESIGN/" "$COMMIT_MSG_FILE"
+    sed -i "" "s/^design/$PREFIX_DESIGN/" "$COMMIT_MSG_FILE"
 fi
 
 if grep -q "^fix" "$COMMIT_MSG_FILE"; then
-    sed -i "s/^fix/$PREFIX_FIX/" "$COMMIT_MSG_FILE"
+    sed -i "" "s/^fix/$PREFIX_FIX/" "$COMMIT_MSG_FILE"
 fi
 
 if grep -q "^test" "$COMMIT_MSG_FILE"; then
-    sed -i "s/^test/$PREFIX_TEST/" "$COMMIT_MSG_FILE"
+    sed -i "" "s/^test/$PREFIX_TEST/" "$COMMIT_MSG_FILE"
 fi
 
 if grep -q "^build" "$COMMIT_MSG_FILE"; then
-    sed -i "s/^build/$PREFIX_BUILD/" "$COMMIT_MSG_FILE"
+    sed -i "" "s/^build/$PREFIX_BUILD/" "$COMMIT_MSG_FILE"
 fi
 
 if grep -q "^struct" "$COMMIT_MSG_FILE"; then
-    sed -i "s/^struct/$PREFIX_STRUCT/" "$COMMIT_MSG_FILE"
+    sed -i "" "s/^struct/$PREFIX_STRUCT/" "$COMMIT_MSG_FILE"
 fi
 
 if grep -q "^doc" "$COMMIT_MSG_FILE"; then
-    sed -i "s/^doc/$PREFIX_DOC/" "$COMMIT_MSG_FILE"
+    sed -i "" "s/^doc/$PREFIX_DOC/" "$COMMIT_MSG_FILE"
 fi
 
 if grep -q "^internal" "$COMMIT_MSG_FILE"; then
-    sed -i "s/^internal/$PREFIX_INTERNAL/" "$COMMIT_MSG_FILE"
+    sed -i "" "s/^internal/$PREFIX_INTERNAL/" "$COMMIT_MSG_FILE"
 fi
 
 if grep -q "^perf" "$COMMIT_MSG_FILE"; then
-    sed -i "s/^perf/$PREFIX_PERF/" "$COMMIT_MSG_FILE"
+    sed -i "" "s/^perf/$PREFIX_PERF/" "$COMMIT_MSG_FILE"
 fi
 
 if grep -q "^refactor" "$COMMIT_MSG_FILE"; then
-    sed -i "s/^refactor/$PREFIX_REFACTOR/" "$COMMIT_MSG_FILE"
+    sed -i "" "s/^refactor/$PREFIX_REFACTOR/" "$COMMIT_MSG_FILE"
 fi
 
 if grep -q "^typo" "$COMMIT_MSG_FILE"; then
-    sed -i "s/^typo/$PREFIX_TYPO/" "$COMMIT_MSG_FILE"
+    sed -i "" "s/^typo/$PREFIX_TYPO/" "$COMMIT_MSG_FILE"
 fi
 
 if grep -q "^wip" "$COMMIT_MSG_FILE"; then
-    sed -i "s/^wip/$PREFIX_WIP/" "$COMMIT_MSG_FILE"
+    sed -i "" "s/^wip/$PREFIX_WIP/" "$COMMIT_MSG_FILE"
 fi
 
 if grep -q "^meta" "$COMMIT_MSG_FILE"; then
-    sed -i "s/^meta/$PREFIX_META/" "$COMMIT_MSG_FILE"
+    sed -i "" "s/^meta/$PREFIX_META/" "$COMMIT_MSG_FILE"
 fi
 
 if grep -q "^config" "$COMMIT_MSG_FILE"; then
-    sed -i "s/^config/$PREFIX_CONFIG/" "$COMMIT_MSG_FILE"
+    sed -i "" "s/^config/$PREFIX_CONFIG/" "$COMMIT_MSG_FILE"
 fi

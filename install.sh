@@ -44,7 +44,14 @@ else
 fi
 # Copy the .hyper.js configuration file
 echo "🔄 Configuring Hyper..."
+if [ -f ~/.hyper.js ]; then
+    rm -f ~/.hyper.js.old
+    cp ~/.hyper.js ~/.hyper.js.old
+    rm -f ~/.hyper.js
+    echo "✅ Existing .hyper.js backed up to ~/.hyper.js.old"
+fi
 cp "$(dirname "$0")/.hyper.js" ~/.hyper.js
+echo "✅ Hyper configured."
 
 # Update the colors object in .hyper.js using colors from colors.sh
 echo "🎨 Updating Hyper colors..."
@@ -127,30 +134,50 @@ else
     echo "✅ autojump is already installed."
 fi
 
-# Move my theme to oh-my-zsh custom themes directory
-echo "🔍 Installing sober theme..."
-mkdir -p ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes
-cp "$(dirname "$0")/sober.zsh-theme" ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/sober.zsh-theme
-echo "✅ sober theme installed."
+# Move custom themes folder
+echo "🔍 Installing custom themes..."
+if [ -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes" ]; then
+    rm -rf "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes.old"
+    mv "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes" "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes.old"
+    rm -rf "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes"
+fi
+cp -lR "$(dirname "$0")/oh-my-zsh-themes" "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes"
+echo "✅ Custom themes installed."
+
 
 # Copy the .zshrc configuration file
 echo "🔄 Configuring zsh..."
-cp "$(dirname "$0")/.zshrc" ~/.zshrc
+if [ -f ~/.zshrc ]; then
+    rm -f ~/.zshrc.old
+    cp ~/.zshrc ~/.zshrc.old
+    rm -f ~/.zshrc
+    echo "✅ Existing .zshrc backed up to ~/.zshrc.old"
+fi
+ln "$(dirname "$0")/.zshrc" ~/.zshrc
 echo "✅ zsh configured."
 
 # Step 6: Configure SSH
 echo "🔄 Configuring SSH..."
-if [ ! -d ~/.ssh ]; then
-    mkdir -p ~/.ssh
+# Backup existing SSH configuration if it exists
+if [ -d ~/.ssh ]; then
+    rm -rf ~/.ssh.old
+    cp -r ~/.ssh ~/.ssh.old
+    rm -rf ~/.ssh
+    echo "✅ Existing SSH configuration backed up to ~/.ssh.old"
 fi
-rm -rf ~/.ssh/config.d
-rm -f ~/.ssh/config
-cp "$(dirname "$0")/ssh/config" ~/.ssh/config
-cp -r "$(dirname "$0")/ssh/config.d" ~/.ssh/config.d
-rm -rf ~/.ssh/rsa_keys
-cp -r "$(dirname "$0")/ssh/rsa_keys" ~/.ssh/rsa_keys
-chmod 700 ~/.ssh/rsa_keys/priv
+# Create a symbolic link to the SSH configuration directory
+cp -lR "$(dirname "$0")/.ssh" ~/.ssh
+chmod 700 ~/.ssh
 chmod 600 ~/.ssh/rsa_keys/priv/*
+chmod 644 ~/.ssh/rsa_keys/pub/*
+chmod 644 ~/.ssh/config
+chmod 644 ~/.ssh/config.d/*
+# Restore known_hosts from backup if it exists
+if [ -f ~/.ssh.old/known_hosts ]; then
+    cp ~/.ssh.old/known_hosts ~/.ssh/known_hosts
+    chmod 644 ~/.ssh/known_hosts
+    echo "✅ Restored known_hosts from backup"
+fi
 echo "✅ SSH configured."
 
 # Step 7: Install and configure git
@@ -161,12 +188,8 @@ if ! command -v git &> /dev/null; then
 else
     echo "✅ git is already installed."
 fi
-# Copy the .gitconfig configuration file
-echo "🔄 Configuring git..."
-cp "$(dirname "$0")/.gitconfig" ~/.gitconfig
-echo "✅ git configured."
 
-# Step 8: Install and configure tmux
+# Step 7: Install and configure tmux
 if ! command -v tmux &> /dev/null; then
     echo "🔍 tmux not found. Installing tmux..."
     brew install tmux
