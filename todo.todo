@@ -1,9 +1,9 @@
 # tmux
-- clic pour focus pane
 - couleur du W
 - resize pane (shorcut et souris)
-- common paste
+- activer le mode visuel de vim quand on utilise la souris dans vim.
 # vim
+- copier avec la souris -> dans le clipboard -> next
 # hyper
 - une barre sur le coté de hyper
 # Yabai  / skhd
