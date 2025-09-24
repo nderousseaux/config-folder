@@ -12,4 +12,5 @@ The script does the following:
 - Install and configure `zsh` shell with `oh-my-zsh`.
 - Configure `ssh` client.
 - Install and configure `git`.
+- Install and configure `vim` editor.
 - Install and configure `tmux` terminal multiplexer.

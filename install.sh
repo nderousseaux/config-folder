@@ -196,7 +196,26 @@ if [ -f ~/.gitconfig ]; then
 fi
 cp "$(dirname "$0")/git/config" ~/.gitconfig
 
-# Step 7: Install and configure tmux
+# Step 8: Install and configure vim
+if ! command -v vim &> /dev/null; then
+    echo "🔍 vim not found. Installing vim..."
+    brew install vim
+    echo "✅ vim installed."
+else
+    echo "✅ vim is already installed."
+fi
+# Copy the .vimrc configuration file
+echo "🔄 Configuring vim..."
+if [ -f ~/.vimrc ]; then
+    rm -f ~/.vimrc.old
+    cp ~/.vimrc ~/.vimrc.old
+    rm -f ~/.vimrc
+    echo "✅ Existing .vimrc backed up to ~/.vimrc.old"
+fi
+ln "$(dirname "$0")/.vimrc" ~/.vimrc
+echo "✅ vim configured."
+
+# Step 9: Install and configure tmux
 if ! command -v tmux &> /dev/null; then
     echo "🔍 tmux not found. Installing tmux..."
     brew install tmux
