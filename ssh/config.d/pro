@@ -17,6 +17,13 @@ Host bastion
   IdentityFile ~/.ssh/rsa_keys/priv/id_rsa_bastion
   UseKeychain yes
 
+Host p4
+  User root
+  HostName p4.iutrs.unistra.fr
+  IdentityFile ~/.ssh/rsa_keys/priv/id_rsa_p4_childs
+  ProxyJump jade
+  UseKeychain yes
+
 Host cfau-test
   User root
   IdentityFile ~/.ssh/rsa_keys/priv/id_rsa_p4_childs
