@@ -1,19 +1,24 @@
 # tmux
 - couleur du W
-- resize pane (shorcut et souris)
-- activer le mode visuel de vim quand on utilise la souris dans vim. -> next
+- resize pane (shorcut)
 - quand je fais click droit dans le terminal avec tmux : deux clic droit ouverts
+- tmux puis ssh puis vim -> comment ça marche ? (presse papier)
+
 # vim
 - cmd + z pour annuler
 - cmd + a pour tout sélectionner
-- **la ligne de 80 caractères**
-- visual + tab pour indenter / désindenter
+- vim en ssh -> ?? comment ça marche (presse papier)
+- numero de ligne relatifs
+- **visual + tab pour indenter / désindenter**
+
 # hyper
 - une barre sur le coté de hyper
-- couleur dégueulasse en plein écrnan
-# Yabai  / skhd
+- couleur dégueulasse en plein écran
+
+# Yabai  / skhd ou autre
 Suite un déplacement de space -> focus finder
 shift -> app ou space quand app en plein écran : pas d’animation de glissement 
+
 # vscode
 # autres
 - colima

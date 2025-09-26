@@ -2,6 +2,10 @@ syntax on
 set mouse=a    " Enable mouse support in all modes
 
 
+"""""""""""""""" Theme """"""""""""""""
+set colorcolumn=80
+highlight ColorColumn ctermbg=black guibg=#222222
+
 """"""""""""" Indentation """""""""""""
 set tabstop=4 " Number of spaces that a <Tab> counts for
 set shiftwidth=4 " Number of spaces to use for each step of (auto)indent
