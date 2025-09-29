@@ -5,11 +5,9 @@
 - tmux puis ssh puis vim -> comment ça marche ? (presse papier)
 
 # vim
-- cmd + z pour annuler
-- cmd + a pour tout sélectionner
-- vim en ssh -> ?? comment ça marche (presse papier)
+- vim en ssh -> ?? comment ça marche (presse papier aussi)
 - numero de ligne relatifs
-- **visual + tab pour indenter / désindenter**
+- closing bracket
 
 # hyper
 - une barre sur le coté de hyper

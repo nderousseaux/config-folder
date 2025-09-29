@@ -2,6 +2,17 @@ syntax on
 set mouse=a    " Enable mouse support in all modes
 
 
+"""""""""""""""" Shortuts """""""""""""
+nnoremap <C-s> :w<CR> " Save file with Ctrl + s
+nnoremap <C-q> :q<CR> " Quit with Ctrl + q
+nnoremap <C-a> ggVG " Select all with Ctrl + a
+nnoremap <C-z> u " Undo with Ctrl + z
+nnoremap <C-y> <C-r> " Redo with Ctrl + y
+nnoremap <Tab> >> " Indent with Tab
+nnoremap <S-Tab> <<
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
+
 """""""""""""""" Theme """"""""""""""""
 set colorcolumn=80
 highlight ColorColumn ctermbg=black guibg=#222222
