@@ -30,3 +30,11 @@ vnoremap <C-c> "+y
 if has('macunix')
     set clipboard=unnamed
 endif
+
+"""""""""""""" Code """""""""""""""""
+" Automatically close brackets and quotes
+inoremap ( ()<Left>
+inoremap [ []<Left>
+inoremap { {}<Left>
+inoremap ' ''<Left>
+inoremap " ""<Left>
