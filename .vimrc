@@ -16,6 +16,7 @@ vnoremap <S-Tab> <gv
 """""""""""""""" Theme """"""""""""""""
 set colorcolumn=80
 highlight ColorColumn ctermbg=black guibg=#222222
+set textwidth=80
 
 """"""""""""" Indentation """""""""""""
 set tabstop=4 " Number of spaces that a <Tab> counts for
@@ -32,9 +33,7 @@ if has('macunix')
 endif
 
 """""""""""""" Code """""""""""""""""
-" Automatically close brackets and quotes
-inoremap ( ()<Left>
-inoremap [ []<Left>
-inoremap { {}<Left>
-inoremap ' ''<Left>
-inoremap " ""<Left>
+" Auto-pairs plugin
+call plug#begin('~/.vim/plugged')
+Plug 'jiangmiao/auto-pairs'
+call plug#end()

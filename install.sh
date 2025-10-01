@@ -213,7 +213,24 @@ if [ -f ~/.vimrc ]; then
     echo "✅ Existing .vimrc backed up to ~/.vimrc.old"
 fi
 ln "$(dirname "$0")/.vimrc" ~/.vimrc
+
+# Install vim-plug plugin manager if not installed
+if [ ! -f ~/.vim/autoload/plug.vim ]; then
+    echo "🔍 vim-plug not found. Installing vim-plug..."
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    echo "✅ vim-plug installed."
+else
+    echo "✅ vim-plug is already installed."
+fi
+
+# Install plugins defined in .vimrc
+echo "🔄 Installing vim plugins..."
+vim +PlugInstall +qall
+echo "✅ vim plugins installed."
+
 echo "✅ vim configured."
+
 
 # Step 9: Install and configure tmux
 if ! command -v tmux &> /dev/null; then

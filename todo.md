@@ -6,16 +6,14 @@
 - tmux et less -> pas scrollable
 
 # vim
-- vim en ssh -> ?? comment ça marche (presse papier aussi)
-- **autowrap au bout de 80 car**
+**- vim en ssh -> ?? comment ça marche (presse papier aussi)**
 
 # hyper
 - une barre sur le coté de hyper
 - couleur dégueulasse en plein écran
 
 # Yabai  / skhd ou autre
-Suite un déplacement de space -> focus finder
-shift -> app ou space quand app en plein écran : pas d’animation de glissement 
+Suite un déplacement de space -> focus finder shift -> app ou space quand app en plein écran : pas d’animation de glissement
 
 # vscode
 
@@ -23,4 +21,3 @@ shift -> app ou space quand app en plein écran : pas d’animation de glissemen
 - colima
 - docker
 - node
-
