@@ -5,7 +5,7 @@
 COLORS=(
     "black:#1E2127"
     "grey:#282C34"
-    "greyOpacity:#282C34BF"
+    "greyOpacity:#282C34FC"
     "lightGrey:#34373f"
     "red:#E06C75"
     "green:#98C379"
