@@ -1,9 +1,7 @@
 # tmux
 - couleur du W
 - **resize pane (shorcut)**
-- quand je fais click droit dans le terminal avec tmux : deux clic droit ouverts
-- tmux puis ssh puis vim -> comment ça marche ? (presse papier)
-- tmux et less -> pas scrollable
+- meilleur shortcut pour la copie
 
 # vim
 
