@@ -32,7 +32,7 @@ CONFIG_VARS=(
     "cursorColor:lightBlack"
     "cursorAccentColor:black"
     "foregroundColor:white"
-    "backgroundColor:greyOpacity"
+    "backgroundColor:grey"
     "selectionColor:lightGrey"
     "borderColor:grey"
 )
