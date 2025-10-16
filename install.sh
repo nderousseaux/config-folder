@@ -269,6 +269,6 @@ else
     echo "✅ TPM is already installed."
 fi
 
-echo "ℹ️  To install tmux plugins, start tmux and press: prefix + I (Ctrl+b then Shift+i)"
+echo "ℹ️  To install tmux plugins, start tmux and press: prefix + I"
 
 echo "🎉 Setup complete! Please restart your terminal to apply all changes."
