@@ -4,6 +4,7 @@
 - meilleur shortcut pour la copie
 
 # vim
+en json -> // puis retour chariot -> nouveau commentaire
 
 # hyper
 
