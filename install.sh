@@ -260,4 +260,15 @@ done
 
 echo "✅ tmux configured with $tmux_replacements color replacements."
 
+# Install TPM (Tmux Plugin Manager) if not installed
+if [ ! -d ~/.tmux/plugins/tpm ]; then
+    echo "🔍 TPM (Tmux Plugin Manager) not found. Installing TPM..."
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    echo "✅ TPM installed."
+else
+    echo "✅ TPM is already installed."
+fi
+
+echo "ℹ️  To install tmux plugins, start tmux and press: prefix + I (Ctrl+b then Shift+i)"
+
 echo "🎉 Setup complete! Please restart your terminal to apply all changes."
