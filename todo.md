@@ -7,7 +7,8 @@
 # vim
 en json -> // puis retour chariot -> nouveau commentaire
 
-# hyper
+# .zshrc
+- Pourquoi github copilot n'arrive pas à lire mon termnal ?
 
 # Yabai  / skhd ou autre
 Suite un déplacement de space -> focus finder shift -> app ou space quand app en plein écran : pas d’animation de glissement
