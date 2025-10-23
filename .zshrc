@@ -17,6 +17,7 @@ export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
 # Development tools
+export PATH="/usr/local/texlive/2025/bin/universal-darwin:$PATH"
 export PATH="/Library/TeX/texbin:$PATH"
 export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
@@ -38,4 +39,4 @@ export CPLUS_INCLUDE_PATH="/Applications/Xcode.app/Contents/Developer/Platforms/
 
 ############## Alias ##############
 alias bssh='ssh -o ServerAliveInterval=10 -o ServerAliveCountMax=3 -t bastion --'
-alias dpda=" docker run --rm --volume "$PWD":/mnt --workdir /mnt -u 1000:1000 -i -t pdagog/refc"
+alias dpda="docker run --rm --volume "$PWD":/mnt --workdir /mnt -u 1000:1000 -i -t pdagog/refc"

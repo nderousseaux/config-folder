@@ -15,10 +15,16 @@ Suite un déplacement de space -> focus finder shift -> app ou space quand app e
 
 # Git
 - commit signing
-
 # vscode
+- plus beau
+- onglets pour plusieurs workspaces ?
 - commande code marche pas
+
 # autres
 - colima
 - docker
 - node
+- tlmgr and his extension
+
+# zshrc
+- alias vim = v
