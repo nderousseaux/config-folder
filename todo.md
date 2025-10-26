@@ -9,6 +9,7 @@ en json -> // puis retour chariot -> nouveau commentaire
 
 # .zshrc
 - Pourquoi github copilot n'arrive pas à lire mon termnal ?
+- alias vim = v
 
 # Yabai  / skhd ou autre
 Suite un déplacement de space -> focus finder shift -> app ou space quand app en plein écran : pas d’animation de glissement
@@ -25,6 +26,4 @@ Suite un déplacement de space -> focus finder shift -> app ou space quand app e
 - docker
 - node
 - tlmgr and his extension
-
-# zshrc
-- alias vim = v
+- pipx
